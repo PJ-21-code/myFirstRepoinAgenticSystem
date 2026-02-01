@@ -8,6 +8,6 @@ if(status!="True" and status!="False"):
     status= input()
 
 if(withdraw<=balance and status=="True"):
-    print(f"Withdrawal Successful. Amount left in account: {balance-withdraw}")
+    print(f"Withdrawal Successful. Balance account: {balance-withdraw}")
 else:
     print("Transaction denied!")    

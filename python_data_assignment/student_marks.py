@@ -10,8 +10,8 @@ for m in range(3):
 for m in range(len(marks)-3,len(marks)):
     l_3.append(marks[m])  
 
-print("First three marks: ",f_3)
-print("last three marks: ",l_3)
+print("First three marks: ",marks[:3])
+print("last three marks: ",marks[len(marks)-3:])
 
 print("Highest marks: ",max(marks))
 print("Lowest marks: ",min(marks))

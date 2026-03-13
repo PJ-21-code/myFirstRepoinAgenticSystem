@@ -34,7 +34,7 @@ print(df[df["Salary"].isnull()])
 
 print("Filling missing values")
 print("------------------------")
-df= df.fillna(df["Salary"].mean())
+df= df["Salary"].fillna(df["Salary"].mean())
 print(df.head())
 
 print("Dropping temporary notes column")

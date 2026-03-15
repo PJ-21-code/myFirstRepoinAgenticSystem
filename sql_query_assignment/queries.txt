@@ -1,0 +1,75 @@
+-- Creating a table
+CREATE TABLE Students(
+ id INT Primary Key,
+ name VARCHAR(50),
+ score INT,
+ passed BOOLEAN,
+ class INT(5)
+);
+
+-- Inserting values into tables
+INSERT INTO Students (id, name, score, passed, class) VALUES
+(1, 'Aarav', 92, TRUE, 10),
+(2, 'Diya', 76, TRUE, 10),
+(3, 'Rohan', 65, FALSE, 9),
+(4, 'Meera', 88, TRUE, 10),
+(5, 'Kabir', 54, FALSE, 9),
+(6, 'Ananya', 95, TRUE, 10),
+(7, 'Rahul', 81, TRUE, 9),
+(8, 'Sneha', 73, TRUE, 9),
+(9, 'Arjun', 84, TRUE, 10),
+(10, 'Kavya', 69, FALSE, 9);
+
+-- Retriving all columns 
+SELECT *
+FROM Students;
+
+-- Retrieve only name and score
+SELECT name,score
+FROM Students
+
+-- Students scored above 80
+SELECT *
+FROM Students
+WHERE score>80;
+
+-- Students scored above 80 and passed
+SELECT *
+FROM Students
+WHERE score>80 AND passed=TRUE;
+
+-- Students score above 85 or class is 9
+SELECT *
+FROM Students
+WHERE score>85 OR class=9;
+
+-- Students who did not pass exam
+SELECT *
+FROM Students
+WHERE passed=FALSE;
+
+-- List of distinct classes
+SELECT DISTINCT class
+FROM Students;
+
+-- Top five highest scorer
+SELECT *
+FROM Students
+ORDER BY score DESC
+LIMIT 5;
+
+-- sort students first by class and then by score
+SELECT *
+FROM Students
+ORDER BY class ASC,score DESC;
+
+-- alias score as final_score
+SELECT name,score AS final_score
+FROM Students;
+
+-- top 3 student scored abobe 75 sorted in descending ORDER
+SELECT name,score 
+FROM Students
+WHERE score>75
+ORDER BY score DESC
+LIMIT 3;

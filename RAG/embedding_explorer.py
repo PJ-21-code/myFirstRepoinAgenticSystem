@@ -15,3 +15,10 @@ for sentence,vector in zip(sentences,embeddings):
     print("Sentence: ",sentence)
     print("vector length: ", len(vector))
     print("Top 5 vectors: ", vector[ :5])
+
+
+#next processes
+print("--- What this means for RAG ---")  
+print("Return + refund sentences are about similar topics,")  
+print("so their vectors sit CLOSER in meaning-space than the viva sentence.")  
+print("Upcoming sessions: store these vectors in a vector DB and SEARCH them.")  

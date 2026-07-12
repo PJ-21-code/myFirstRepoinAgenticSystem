@@ -23,7 +23,7 @@ def speech_to_text(path: Path) -> str:
 def text_summarizer(transcript: str) -> str:
     prompt= (
         "The summary should be in exactly three bullet points."
-        "Write only useful facts. Do not invent details. Add point 1). insteaqd of * in bullet points \n\n"
+        "Write only useful facts. Do not invent details. Add point 1). instead of * in bullet points \n\n"
         f"Transcript: {transcript}"
     )
 

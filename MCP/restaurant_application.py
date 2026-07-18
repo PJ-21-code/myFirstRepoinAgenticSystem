@@ -30,12 +30,13 @@ def place_order(item, quantity):
                order_his['message']= "Sorry the product quantity is not available at your needs"
                return order_his
 
-    order_his['message']= "Item not available"
+    order_his['message']= f"{item} not available"
     return order_his   
 
 def main():
     get_menu()
     print(place_order("chicken_biryani", 2))
+    print(place_order("sushi",3))
     print(place_order("paneer_tikka", 1))
     
 
